@@ -1,7 +1,7 @@
 # Import de plusieurs modules nécessaires pour le fonctionnement (cards.py, score.py et acteurs.py)
 from score import calculer_score
-from acteurs import Joueur
-import cards   
+from acteurs import Joueur, Croupier 
+Monsieur deck.py!!!!!!!!!!!!1
 
 # Fonction pour gérer le tour du joueur
 def tour_joueur(joueur, deck):
@@ -9,9 +9,15 @@ def tour_joueur(joueur, deck):
         print(f"\nMain de {joueur.nom}: {joueur.afficher_main()} (Score: {calculer_score(joueur.main)})")
         action = joueur.choisir_action()
         if action == "tirer":
-            joueur.ajouter_carte(deck.pop())
+            joueur.append(deck.pop())
         else:
             break
+
+
+# Fonction pour gérer le tour du croupier
+def tour_croupier(croupier, deck):
+    while calculer_score(croupier.main) < 17:
+        croupier.
 
 
 # Exemple pour tester (avec if __name__ == "__main__": pour ne pas déclencher le fichier ailleurs)
